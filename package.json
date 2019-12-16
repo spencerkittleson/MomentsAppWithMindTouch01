@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/spencerkittleson/MomentsAppWithMindTouch01/issues"
   },
-  "homepage": "https://github.com/spencerkittleson/MomentsAppWithMindTouch01#readme"
+  "homepage": "https://github.com/spencerkittleson/MomentsAppWithMindTouch01#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "fsm-shell": "^0.2.0-rc0"
+  }
 }
