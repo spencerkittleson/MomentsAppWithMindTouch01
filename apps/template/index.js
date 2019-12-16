@@ -19,8 +19,8 @@ export class App {
     this.eId("cannotContinueBtn").addEventListener("click", () => {
       this.cannotContinue();
     });
-    this.eId("cannotContinueBtn").addEventListener("click", () => {
-      this.sendData();
+    this.eId("submitData").addEventListener("click", () => {
+      this.submitData();
     });
   }
   canContinue() {
@@ -42,6 +42,7 @@ export class App {
     ]);
   }
   sendData(dataArray) {
+    console.log(dataArray);
     this.shellSdk.emit(SHELL_EVENTS.Version1.FLOWS.ON_CONTINUE, {
       output: dataArray
     });
