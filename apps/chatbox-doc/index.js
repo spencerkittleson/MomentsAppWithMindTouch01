@@ -58,11 +58,11 @@ export class App {
       },
       {
         type: "user",
-        message: "Great! What can of white is it?"
+        message: "Great! What kind of white is it?"
       },
       {
         type: "agent",
-        message: "Flat white.  Do you want any more questions?"
+        message: "Flat white.  Do you have any more questions?"
       },
       {
         type: "user",
