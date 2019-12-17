@@ -10,8 +10,8 @@ export class App {
   constructor() {
     this.shellSdk = ShellSdk.init(parent, "*");
     this.shellSdk.emit(SHELL_EVENTS.Version1.FLOWS.REQUIRE_CONTEXT, {
-      clientIdentifier: "template-app",
-      clientSecret: "template-app-secret"
+      clientIdentifier: "acknowledge-app",
+      clientSecret: "acknowledge-app-secret"
     });
     this.eId("confirmation").addEventListener("change", (box) => {
       console.log(box);

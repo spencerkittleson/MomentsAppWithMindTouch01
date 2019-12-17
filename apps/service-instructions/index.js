@@ -10,8 +10,8 @@ export class App {
   constructor() {
     this.shellSdk = ShellSdk.init(parent, "*");
     this.shellSdk.emit(SHELL_EVENTS.Version1.FLOWS.REQUIRE_CONTEXT, {
-      clientIdentifier: "template-app",
-      clientSecret: "template-app-secret"
+      clientIdentifier: "service-instructions-app",
+      clientSecret: "service-instructions-app-secret"
     });
     this.eId("canContinueBtn").addEventListener("click", () => {
       this.canContinue();

@@ -22,5 +22,8 @@
   "devDependencies": {
     "fsm-shell": "^0.2.0-rc0",
     "rxjs": "^6.5.3"
+  },
+  "dependencies": {
+    "bare-css": "^2.0.3"
   }
 }
