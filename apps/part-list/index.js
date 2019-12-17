@@ -3,8 +3,6 @@ import {
   ShellSdk
 } from "/node_modules/fsm-shell/release/fsm-shell-client.es.js";
 
-//import { fromEvent, pipe } from "/node_modules/rxjs/index.js";
-
 export class App {
   static init() {
     return new App();
