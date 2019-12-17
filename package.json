@@ -20,6 +20,7 @@
     "doc": "docs"
   },
   "devDependencies": {
-    "fsm-shell": "^0.2.0-rc0"
+    "fsm-shell": "^0.2.0-rc0",
+    "rxjs": "^6.5.3"
   }
 }

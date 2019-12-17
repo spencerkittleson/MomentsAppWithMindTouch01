@@ -3,6 +3,8 @@ import {
   ShellSdk
 } from "/node_modules/fsm-shell/release/fsm-shell-client.es.js";
 
+//import { fromEvent, pipe } from "/node_modules/rxjs/index.js";
+
 export class App {
   static init() {
     return new App();
@@ -12,6 +14,11 @@ export class App {
     this.shellSdk.emit(SHELL_EVENTS.Version1.FLOWS.REQUIRE_CONTEXT, {
       clientIdentifier: "part-list-app",
       clientSecret: "part-list-app-secret"
+    });
+    this.shellSdk.on(SHELL_EVENTS.Version1.FLOWS.ON_CONTINUE, () => {
+      this.shellSdk.emit(SHELL_EVENTS.Version1.FLOWS.ON_CONTINUE, {
+        output: null
+      });
     });
     this.eName("requirePart").forEach(ele =>
       ele.addEventListener("change", () => {

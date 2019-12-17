@@ -22,6 +22,20 @@ export class App {
     this.eId("submitData").addEventListener("click", () => {
       this.submitData();
     });
+    this.shellSdk.on(SHELL_EVENTS.Version1.FLOWS.ON_CONTINUE, () => {
+      this.shellSdk.emit(SHELL_EVENTS.Version1.FLOWS.ON_CONTINUE, {
+        output: [
+          {
+            name: "textBox01",
+            value: this.eId("textBox01").value
+          },
+          {
+            name: "textBox02",
+            value: this.eId("textBox02").value
+          }
+        ]
+      });
+    });
   }
   canContinue() {
     this.shellSdk.emit(SHELL_EVENTS.Version1.FLOWS.CAN_CONTINUE, true);
@@ -30,22 +44,7 @@ export class App {
     this.shellSdk.emit(SHELL_EVENTS.Version1.FLOWS.CAN_CONTINUE, false);
   }
   submitData() {
-    this.sendData([
-      {
-        name: "textBox01",
-        value: this.eId("textBox01").value
-      },
-      {
-        name: "textBox02",
-        value: this.eId("textBox02").value
-      }
-    ]);
-  }
-  sendData(dataArray) {
-    console.log(dataArray);
-    this.shellSdk.emit(SHELL_EVENTS.Version1.FLOWS.ON_CONTINUE, {
-      output: dataArray
-    });
+    this.canContinue();
   }
   eId(id) {
     return document.getElementById(id);
