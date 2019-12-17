@@ -11,21 +11,21 @@
   <body>
     <h1>Part Requirements:</h1>
     <p>Please gather the following parts:</p>
-    <ul>
-      <li>
-        <label><input type="checkbox" name="requirePart" /> Seal </label>
-      </li>
-      <li>
-        <label><input type="checkbox" name="requirePart" /> 5 x M5 Nuts </label>
-      </li>
-      <li>
-        <label
-          ><input type="checkbox" name="requirePart" /> 4 x M6 Bolts
-        </label>
-      </li>
-      <li>
-        <label><input type="checkbox" name="requirePart" /> Filter </label>
-      </li>
-    </ul>
+    <input id="seal" type="checkbox" name="requirePart" /> 
+    <label for="seal">Seal</label>
+
+    <input id="nuts" type="checkbox" name="requirePart" /> 
+    <label for="nuts">5 x M5 Nuts</label>
+
+    <input id="bolts" type="checkbox" name="requirePart" /> 
+    <label for="bolts">4 x M6 Bolts</label>
+
+    <input id="filter" type="checkbox" name="requirePart" />
+    <label for="filter">Filter</label>
   </body>
+  <style>
+    input {
+      display: block;
+    }
+  </style>
 </html>

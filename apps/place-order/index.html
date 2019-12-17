@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="/node_modules/bare-css/css/bare.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Billy Bookcase</h1>
+      <img id="bookcase" src="../../assets/billy.jpg"/>
+      <img id="dimensions" src="../../assets/billy-bookcase_dimensions.png"/>
+      <h3>Item Options</h3>
+      <label for="color">Color</label>
+      <select id="color">
+        <option value=""> - Please select a color - </option>
+        <option value="White">White</option>
+        <option value="Brown ash veneer">Brown ash veneer</option>
+        <option value="Black-brown">Black-brown</option>
+        <option value="Birch">Birch Veneer</option>
+      </select>
+
+      <h3>Confirm Purchase</h3>
+      <p>Item: Billy bookcase</p>
+      <p id="colorDisplay"></p>
+      <button id="canContinueBtn">Confirm</button>    
+      <br/>
+      <button id="cannotContinueBtn">Cancel</button>
+      <br/>
+    </div>
+  </body>
+  <style>
+    .container {
+      padding: 13px;
+    }
+    #bookcase {
+      height: 350px;
+      width: 350px;
+    }
+    #dimensions {
+      height: 350px;
+      width: 350px;
+    }
+  </style>
+</html>
